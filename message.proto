@@ -1,0 +1,45 @@
+syntax = "proto3";
+package gocnn;
+
+message RequestV1 {
+    int32 board_size = 1;
+    repeated bool board_state = 2;
+    repeated bool our_group_lib1 = 3;
+    repeated bool our_group_lib2 = 4;
+    repeated bool our_group_lib3_plus = 5;
+    repeated bool oppo_group_lib1 = 6;
+    repeated bool oppo_group_lib2 = 7;
+    repeated bool oppo_group_lib3_plus = 8;
+    
+}
+
+message ResponseV1 {
+    int32 board_size = 1;
+    repeated float possibility = 2;
+}
+
+message RequestV2 {
+    int32 board_size = 1;
+    repeated bool board_state = 2;
+    repeated bool our_group_lib1 = 3;
+    repeated bool our_group_lib2 = 4;
+    repeated bool our_group_lib3 = 5;
+    repeated bool our_group_lib4_plus = 6;
+    repeated bool oppo_group_lib1 = 7;
+    repeated bool oppo_group_lib2 = 8;
+    repeated bool oppo_group_lib3 = 9;
+    repeated bool oppo_group_lib4_plus = 10;
+    repeated bool all_ones = 11;
+    repeated bool our_true_eye = 12;
+    repeated bool our_fake_eye = 13;
+    repeated bool our_semi_eye = 14;
+    repeated bool oppo_true_eye = 15;
+    repeated bool oppo_fake_eye = 16;
+    repeated bool oppo_semi_eye = 17;
+    repeated bool all_zeros = 18;
+}
+
+message ResponseV2 {
+    int32 board_size = 1;
+    repeated float possibility = 2;
+}
